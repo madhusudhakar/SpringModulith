@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'org.springframework.boot' version '3.2.5'
+    id 'io.spring.dependency-management' version '1.1.5'
+
+
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '21'  // or 17 if you prefer
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.modulith:spring-modulith-starter-core:1.4.3'
+    implementation 'org.springframework.modulith:spring-modulith-starter-jpa:1.4.3'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.modulith:spring-modulith-starter-insight:1.4.3'
+    implementation 'org.springframework.modulith:spring-modulith-events:1.4.3'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // JUnit 5 (for compatibility with Spock & Spring Boot)
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    runtimeOnly 'com.h2database:h2'
+
+    testImplementation 'org.springframework.modulith:spring-modulith-starter-test:1.4.3'
+
+    implementation 'org.springframework.modulith:spring-modulith-core:1.4.3'
+    implementation 'org.springframework.modulith:spring-modulith-docs:1.4.3'
+
+    testImplementation platform("org.apache.groovy:groovy-bom:4.0.25")
+    testImplementation 'org.apache.groovy:groovy:4.0.25'
+    testImplementation platform("org.spockframework:spock-bom:2.4-M2-groovy-4.0")
+    testImplementation 'org.spockframework:spock-core'
+    testImplementation 'org.spockframework:spock-spring'
+
+    test {
+        useJUnitPlatform()
+    }
+
+
+}
