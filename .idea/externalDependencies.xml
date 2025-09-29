@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalDependencies">
+    <plugin id="Spock Framework Enhancements" />
+    <plugin id="com.intlimit.grsplugin" />
+    <plugin id="io.github.lobodpav.spock" />
+  </component>
+</project>
